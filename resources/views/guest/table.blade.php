@@ -20,14 +20,18 @@
 	
 <tr>
 	
-<th>#</th>
-<th>name</th>
+<th>Name</th>
+<th>Lastname</th>
+<th>Address</th>
+<th>Bio</th>
+<th>Birth date</th>
+
 
 </tr>
 
 <tr>
 	@foreach ($newdata as $data)
-		<td> {{++$loop->index}} </td>
+		{{-- <td> # </td> --}}
 		<td> {{ $data }} </td>
 		@endforeach
 </tr>

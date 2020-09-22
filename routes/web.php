@@ -24,10 +24,19 @@ Route::get("/testrequest", function(){
 });
 
 
+
+
+
+
 Route::post("/postmethod",function(Request $request){
 	$data=[
-		"name"=>$request->post()["name"]
+		"name"=>$request->post()["name"], "lastname"=>$request->post()["lastname"], "address"=>$request->post()["address"],"biograpia"=>$request->post()["biograpia"], "birthdate"=>$request->post()["birthdate"]
+		
 	];
+
+
+
+
 	return view("guest.table",["newdata"=>$data]);
 })->name("posttest");
 
